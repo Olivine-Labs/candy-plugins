@@ -88,12 +88,16 @@ CandyShop.NameComplete = (function(self, Candy, $) {
 		var menu = $('#context-menu'),
 			content = menu.find('ul'),
 			selected = content.find('li.selected');
+<<<<<<< HEAD
 		
 		if(menu.css('display') == 'none') {
 			$(document).unbind('keydown', self.keyDown);
 			return;
 		}
 		
+=======
+
+>>>>>>> troymccabe/dev
 		// switch the key code
 		switch (e.which) {
 			// up arrow
@@ -142,6 +146,7 @@ CandyShop.NameComplete = (function(self, Candy, $) {
 		// stop the action of any keys
 		e.preventDefault();
 	};
+<<<<<<< HEAD
 	
 	/** Function: selectOnClick
 	 * The listener for click on decision in the menu
@@ -156,6 +161,8 @@ CandyShop.NameComplete = (function(self, Candy, $) {
 		$('input[name="message"]').focus();
 		e.preventDefault();
 	};
+=======
+>>>>>>> troymccabe/dev
 
 	/** Function: populateNicks
 	 * Populate the collection of nicks to autocomplete from
