@@ -47,7 +47,7 @@ CandyShop.Colors = (function(self, Candy, $) {
     // Updated to new jQuery event model
     $(Candy.View.Pane).bind('candy:view.message.beforeShow', function(e, args) {
       // apply the color before it's shown
-      args.message = args.message.replace(/^\|c:([0-9]{1,2})\|(.*)/gm, '<span class="colored color-$1">$2</span>');
+      args.message = args.message.replace(/^\|c:([0-9]{1,2})\|(.*)/gm, '<span style="color: ' + _options.colors[i] + '">$2</span>');
     });
 
     // if we have the cookie
@@ -87,7 +87,7 @@ CandyShop.Colors = (function(self, Candy, $) {
 
     // build the grid of colors
     for(i = _options.colors.length -1; i >= 0; i--) {
-      colors = '<span style="color: ' + _options.colors[i] + '" data-color="' + _options.colors[i] + '"></span>' + colors;
+      colors = '<span style="background-color: ' + _options.colors[i] + '" data-color="' + _options.colors[i] + '"></span>' + colors;
     }
     // set the grid in the one list item we create
     content.html('<li class="colors">' + colors + '</li>');
